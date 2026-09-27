@@ -1,5 +1,12 @@
 # guarded-agent
 
+[![ci](https://github.com/Tejasdk04/guarded-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/Tejasdk04/guarded-agent/actions/workflows/ci.yml)
+[![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
+[![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)](#tests)
+[![tests](https://img.shields.io/badge/tests-26%20passing-brightgreen)](#tests)
+[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![langgraph](https://img.shields.io/badge/built%20on-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
+
 **A LangGraph agent that cannot overspend, cannot loop forever, and cannot take
 an irreversible action without passing a gate.**
 
@@ -100,7 +107,7 @@ Agent(chain=ProviderChain([MyProvider(), StubProvider()]))  # with a fallback
 
 ```bash
 pytest --cov=guardedagent
-# 21 passed, 99% coverage
+# 26 passed, 99% coverage
 ```
 
 The tests assert the *negative* cases, which are the ones that matter: that an
